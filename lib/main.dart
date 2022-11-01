@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ifood_seller_app/splashScreen/splash_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        
-      ),
+      home: const MySplashScreen(),
     );
   }
 }

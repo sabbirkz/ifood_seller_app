@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:ifood_seller_app/authentication/auth_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
   const MySplashScreen({super.key});
@@ -8,6 +11,21 @@ class MySplashScreen extends StatefulWidget {
 }
 
 class _MySplashScreenState extends State<MySplashScreen> {
+  startTimer() {
+    // for splash screen timer
+    Timer(const Duration(seconds: 8), () async {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (c) => const AuthScreen()));
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    startTimer();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -17,15 +35,21 @@ class _MySplashScreenState extends State<MySplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("images/splash.jpg"),
-              SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.all(18.0),
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset("images/splash.jpg"),
+              ),
+              const SizedBox(height: 10),
+              const Padding(
+                padding: EdgeInsets.all(18.0),
                 child: Text(
                   "Sell Food Online",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black54,
+                    fontSize: 40,
+                    fontFamily: "Signatra",
+                    letterSpacing: 3,
                   ),
                 ),
               )
