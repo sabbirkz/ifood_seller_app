@@ -12,14 +12,13 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
-
-
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController Controller = TextEditingController();
-  TextEditingController nameController = TextEditingController();
-  TextEditingController nameController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController locationController = TextEditingController();
 
   XFile? imageXFile;
   final ImagePicker _picker = ImagePicker();
@@ -51,6 +50,90 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
             SizedBox(
               height: 10,
+            ),
+            Form(
+              key: _formkey,
+              child: Column(
+                children: [
+                  CustomTextField(
+                    data: Icons.person,
+                    controller: nameController,
+                    hintText: "Name",
+                    isObsecre: false,
+                  ),
+                  CustomTextField(
+                    data: Icons.email,
+                    controller: emailController,
+                    hintText: "Email",
+                    isObsecre: false,
+                  ),
+                  CustomTextField(
+                    data: Icons.lock,
+                    controller: passwordController,
+                    hintText: "Password",
+                    isObsecre: true,
+                  ),
+                  CustomTextField(
+                    data: Icons.lock,
+                    controller: confirmPasswordController,
+                    hintText: "Confirm Password",
+                    isObsecre: true,
+                  ),
+                  CustomTextField(
+                    data: Icons.phone,
+                    controller: phoneController,
+                    hintText: "Phone",
+                    isObsecre: false,
+                  ),
+                  CustomTextField(
+                    data: Icons.my_location,
+                    controller: locationController,
+                    hintText: "Cafe / Restaurant Address",
+                    isObsecre: false,
+                    enabled: false,
+                  ),
+                  Container(
+                    width: 400,
+                    height: 40,
+                    alignment: Alignment.center,
+                    child: ElevatedButton.icon(
+                      label: Text(
+                        "Get My Current Location",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      icon: Icon(
+                        Icons.location_on,
+                        color: Colors.white,
+                      ),
+                      onPressed: () => print("Clicked"),
+                      style: ElevatedButton.styleFrom(
+                          primary: Colors.amber,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          )),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+              child: Text(
+                "Sign Up",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.cyan,
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+              ),
+              onPressed: () => print("clicked"),
+            ),
+            SizedBox(
+              height: 30,
             ),
           ],
         ),
