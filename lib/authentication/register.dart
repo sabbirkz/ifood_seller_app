@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
@@ -31,7 +30,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   Future<void> _getImage() async {
     imageXFile = await _picker.pickImage(source: ImageSource.gallery);
-
     setState(() {
       imageXFile;
     });
@@ -40,9 +38,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   LocationPermission? permission;
 
   getCurrentLocation() async {
-    permission = await Geolocator.requestPermission();
+    //permission = await Geolocator.requestPermission();
     Position newPosition = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+        desiredAccuracy: LocationAccuracy.high,
+       );
 
     position = newPosition;
 

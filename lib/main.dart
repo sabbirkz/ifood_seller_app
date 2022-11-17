@@ -3,6 +3,8 @@ import 'package:ifood_seller_app/splashScreen/splash_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+
   runApp(const MyApp());
 }
 
