@@ -31,7 +31,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Future<void> _getImage() async {
     imageXFile = await _picker.pickImage(source: ImageSource.gallery);
     setState(() {
-      imageXFile;
+      imageXFile; 
     });
   }
 
