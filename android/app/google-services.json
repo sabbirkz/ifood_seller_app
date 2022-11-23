@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "713771087993",
+    "project_id": "ifood-app-4b7a4",
+    "storage_bucket": "ifood-app-4b7a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713771087993:android:f320cbe0c76bd1e0a8fca8",
+        "android_client_info": {
+          "package_name": "com.ifood.sellersapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713771087993-12uj84j46o9cd2nbuvnkugto1fq5kpj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHbn1WzBvmBEusLurY3w85RcJKTLlIGzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713771087993-12uj84j46o9cd2nbuvnkugto1fq5kpj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
